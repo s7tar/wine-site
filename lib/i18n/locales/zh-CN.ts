@@ -6,7 +6,7 @@ export const zhCN = {
     gallery: "精选展示",
     contact: "联系我们",
     brand: "ELITE",
-    brandSub: "红酒会所",
+    brandSub: "ハルカ株式会社",
     openMenu: "打开菜单",
     closeMenu: "关闭菜单",
   },
@@ -50,7 +50,8 @@ export const zhCN = {
     bodyDesc:
       "酒体轻盈型、酒体中等型、酒体饱满型。赤霞珠、西拉属于酒体饱满型，黑皮诺属于酒体轻盈型。",
     glassTitle: "酒杯的选择",
-    glassIntro: "在西方传统观点中，为葡萄酒选择正确的酒杯，能帮助更好的品味美酒。",
+    glassIntro:
+      "在西方传统观点中，为葡萄酒选择正确的酒杯，能帮助更好的品味美酒。",
     bordeauxGlass: "波尔多红酒杯",
     bordeauxDesc:
       "杯身长而杯口较窄，把酒的香气聚集在杯口，适用于除勃艮第之外的红酒。",
@@ -100,15 +101,15 @@ export const zhCN = {
     title: "联系我们",
     description: "期待与您相约，共同品味生活的精致与美好",
     address: "地址",
-    addressValue: "上海市静安区南京西路1266号恒隆广场一座58楼",
+    addressValue: "大阪市阿倍野区丸山通1-5-2 207",
     phone: "电话",
-    phoneValue: "+86 21 6288 8888",
+    phoneValue: "+81 06-7654-8667",
     email: "邮箱",
-    emailValue: "contact@eliteclub.com",
+    emailValue: "contact@haruka.com",
     hours: "营业时间",
-    hoursValue: "周一至周日 14:00 - 24:00",
-    mapTitle: "上海市静安区",
-    mapSubtitle: "南京西路1266号恒隆广场",
+    hoursValue: "周一至周五 09:00 - 18:00",
+    mapTitle: "大阪市阿倍野区",
+    mapSubtitle: "丸山通1-5-2 207",
     viewOnMap: "在地图中查看",
     formTitle: "预约咨询",
     nameLabel: "姓名",
@@ -116,7 +117,7 @@ export const zhCN = {
     emailLabel: "邮箱",
     emailPlaceholder: "your@email.com",
     phoneLabel: "电话",
-    phonePlaceholder: "+86",
+    phonePlaceholder: "",
     messageLabel: "留言",
     messagePlaceholder: "请输入您的留言内容...",
     submit: "提交留言",
@@ -128,7 +129,7 @@ export const zhCN = {
 
   // Footer
   footer: {
-    copyright: "ELITE 红酒会所. 保留所有权利.",
+    copyright: "ハルカ株式会社. 保留所有权利.",
     tagline: "品味生活的艺术 | The Art of Fine Living",
   },
 };

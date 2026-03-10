@@ -8,7 +8,7 @@ export const ja: typeof zhCN = {
     gallery: "ギャラリー",
     contact: "お問い合わせ",
     brand: "ELITE",
-    brandSub: "ワインクラブ",
+    brandSub: "ハルカ株式会社",
     openMenu: "メニューを開く",
     closeMenu: "メニューを閉じる",
   },
@@ -109,15 +109,15 @@ export const ja: typeof zhCN = {
     description:
       "お会いできることを楽しみにしています。上質な生活の美しさを一緒に味わいましょう",
     address: "住所",
-    addressValue: "上海市静安区南京西路1266号恒隆広場一座58階",
+    addressValue: "大阪市阿倍野区丸山通1-5-2 207",
     phone: "電話",
-    phoneValue: "+86 21 6288 8888",
+    phoneValue: "+81 06-7654-8667",
     email: "メール",
     emailValue: "contact@eliteclub.com",
     hours: "営業時間",
-    hoursValue: "月〜日 14:00 - 24:00",
-    mapTitle: "上海市静安区",
-    mapSubtitle: "南京西路1266号恒隆広場",
+    hoursValue: "月〜金 09:00 - 18:00",
+    mapTitle: "大阪市阿倍野区",
+    mapSubtitle: "丸山通1-5-2 207",
     viewOnMap: "地図で見る",
     formTitle: "ご予約・お問い合わせ",
     nameLabel: "お名前",
@@ -125,7 +125,7 @@ export const ja: typeof zhCN = {
     emailLabel: "メールアドレス",
     emailPlaceholder: "your@email.com",
     phoneLabel: "電話番号",
-    phonePlaceholder: "+86",
+    phonePlaceholder: "",
     messageLabel: "メッセージ",
     messagePlaceholder: "メッセージを入力してください...",
     submit: "送信",
@@ -137,7 +137,7 @@ export const ja: typeof zhCN = {
 
   // Footer
   footer: {
-    copyright: "ELITE ワインクラブ. All rights reserved.",
+    copyright: "ハルカ株式会社. All rights reserved.",
     tagline: "上質な生活の芸術",
   },
 };

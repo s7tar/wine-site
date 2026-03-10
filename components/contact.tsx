@@ -14,6 +14,7 @@ import { useI18n } from "@/lib/i18n/context";
 
 export function Contact() {
   const { t } = useI18n();
+  const mapQueryAddress = "大阪市阿倍野区丸山通1-5-2";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -115,7 +116,7 @@ export function Contact() {
                     {t.contact.mapSubtitle}
                   </p>
                   <a
-                    href="https://maps.google.com"
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQueryAddress)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 mt-4 text-accent text-sm hover:underline"

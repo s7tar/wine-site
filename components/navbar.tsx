@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -34,21 +35,24 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-background/95 backdrop-blur-md shadow-lg"
+        : "bg-transparent"
+        }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-5">
           <Link href="#home" className="flex items-center gap-3">
-            <span className="text-2xl font-bold text-accent tracking-wider">
-              {t.nav.brand}
-            </span>
-            <span className="text-sm text-muted-foreground tracking-widest uppercase">
+            <Image
+              src="/haruka-gold.png"
+              alt={t.nav.brand}
+              width={160}
+              height={40}
+              priority
+            />
+            {/* <span className="text-sm text-muted-foreground tracking-widest uppercase">
               {t.nav.brandSub}
-            </span>
+            </span> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -69,7 +73,7 @@ export function Navbar() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="gap-2 text-foreground/80 hover:text-accent"
+                  className="gap-2 text-foreground hover:bg-accent/15 hover:text-foreground"
                 >
                   <Globe size={16} />
                   <span className="text-sm">{localeNames[locale]}</span>
@@ -80,9 +84,8 @@ export function Navbar() {
                   <DropdownMenuItem
                     key={loc}
                     onClick={() => setLocale(loc)}
-                    className={`cursor-pointer ${
-                      locale === loc ? "text-accent" : "text-foreground"
-                    }`}
+                    className={`cursor-pointer ${locale === loc ? "font-medium text-accent" : "text-foreground"
+                      } hover:bg-accent/15 hover:text-foreground`}
                   >
                     {localeNames[loc]}
                   </DropdownMenuItem>
@@ -90,6 +93,7 @@ export function Navbar() {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
+
 
           {/* Mobile Menu */}
           <div className="md:hidden flex items-center gap-2">
@@ -99,7 +103,7 @@ export function Navbar() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-foreground/80"
+                  className="text-foreground hover:bg-accent/15 hover:text-foreground"
                 >
                   <Globe size={20} />
                 </Button>
@@ -109,15 +113,15 @@ export function Navbar() {
                   <DropdownMenuItem
                     key={loc}
                     onClick={() => setLocale(loc)}
-                    className={`cursor-pointer ${
-                      locale === loc ? "text-accent" : "text-foreground"
-                    }`}
+                    className={`cursor-pointer ${locale === loc ? "font-medium text-accent" : "text-foreground"
+                      } hover:bg-accent/15 hover:text-foreground`}
                   >
                     {localeNames[loc]}
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+
 
             {/* Mobile Menu Sheet */}
             <Sheet>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { useI18n } from "@/lib/i18n/context";
 
@@ -20,9 +21,13 @@ export function Footer() {
         <div className="flex flex-col items-center gap-8">
           {/* Logo */}
           <Link href="#home" className="flex items-center gap-3">
-            <span className="text-2xl font-bold text-accent tracking-wider">
-              {t.nav.brand}
-            </span>
+            <Image
+              src="/haruka-gold.png"
+              alt={t.nav.brand}
+              width={140}
+              height={36}
+              priority
+            />
             <span className="text-sm text-muted-foreground tracking-widest uppercase">
               {t.nav.brandSub}
             </span>
