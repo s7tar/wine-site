@@ -109,15 +109,16 @@ export const en: typeof zhCN = {
     description:
       "We look forward to meeting you and sharing the refined beauty of life together",
     address: "Address",
-    addressValue: "1-5-2 207 Maruyama-dori, Abeno-ku, Osaka",
+    addressValue:
+      "Room 502, 1-1-3 Yariyamachi, Chuo-ku, Osaka-shi, Osaka, Japan",
     phone: "Phone",
-    phoneValue: "+81 06-7654-8667",
+    phoneValue: "+81 06-6910-8900",
     email: "Email",
     emailValue: "contact@haruka.com",
     hours: "Hours",
-    hoursValue: "Mon - Fri 09:00 - 18:00",
-    mapTitle: "Abeno-ku, Osaka",
-    mapSubtitle: "Maruyama-dori 1-5-2 207",
+    hoursValue: "Mon - Fri 10:00 - 17:00",
+    mapTitle: "Chuo-ku, Osaka-shi, Osaka",
+    mapSubtitle: "Room 502, 1-1-3 Yariyamachi",
     viewOnMap: "View on Map",
     formTitle: "Book a Consultation",
     nameLabel: "Name",
@@ -137,7 +138,7 @@ export const en: typeof zhCN = {
 
   // Footer
   footer: {
-    copyright: "ELITE Wine Club. All rights reserved.",
+    copyright: "HARUKA Co., Ltd. All rights reserved.",
     tagline: "The Art of Fine Living",
   },
 };

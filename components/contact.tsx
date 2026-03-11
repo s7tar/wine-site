@@ -14,7 +14,7 @@ import { useI18n } from "@/lib/i18n/context";
 
 export function Contact() {
   const { t } = useI18n();
-  const mapQueryAddress = "大阪市阿倍野区丸山通1-5-2";
+  const mapQueryAddress = "大阪市中央区鎗屋町一丁目1番3";
   const [formData, setFormData] = useState({
     name: "",
     email: "",

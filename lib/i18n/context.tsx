@@ -30,7 +30,7 @@ interface I18nContextType {
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("zh-CN");
+  const [locale, setLocaleState] = useState<Locale>("ja");
 
   const setLocale = useCallback((newLocale: Locale) => {
     setLocaleState(newLocale);
