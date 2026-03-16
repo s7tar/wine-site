@@ -80,7 +80,7 @@ export const ja: typeof zhCN = {
     tasteTitle: "味を味わう",
     tasteDesc:
       "少量を口に含み、舌全体で転がします。質感、風味、余韻の長さを確かめます。",
-    share: "語り合う",
+    share: "語り",
     shareTitle: "言葉にして共有",
     shareDesc:
       "感じた印象を言葉にして共有することで、ワインの魅力はさらに深まります。",
