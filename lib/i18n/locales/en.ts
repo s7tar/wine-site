@@ -114,7 +114,7 @@ export const en: typeof zhCN = {
     phone: "Phone",
     phoneValue: "+81 06-6910-8900",
     email: "Email",
-    emailValue: "contact@haruka.com",
+    emailValue: "service@haruka.com.co",
     hours: "Hours",
     hoursValue: "Mon - Fri 10:00 - 17:00",
     mapTitle: "Chuo-ku, Osaka-shi, Osaka",

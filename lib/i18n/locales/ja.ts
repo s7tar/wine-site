@@ -113,7 +113,7 @@ export const ja: typeof zhCN = {
     phone: "電話",
     phoneValue: "+81 06-6910-8900",
     email: "メール",
-    emailValue: "contact@haruka.com",
+    emailValue: "service@haruka.com.co",
     hours: "営業時間",
     hoursValue: "月〜金 10:00 - 17:00",
     mapTitle: "大阪市中央区",

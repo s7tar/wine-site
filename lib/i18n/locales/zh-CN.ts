@@ -105,7 +105,7 @@ export const zhCN = {
     phone: "电话",
     phoneValue: "+81 06-6910-8900",
     email: "邮箱",
-    emailValue: "contact@haruka.com",
+    emailValue: "service@haruka.com.co",
     hours: "营业时间",
     hoursValue: "周一至周五 10:00 - 17:00",
     mapTitle: "大阪市中央区",
