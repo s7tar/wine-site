@@ -50,20 +50,20 @@ export function WineSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
             {t.wine.title}
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed whitespace-pre-line">
             {t.wine.intro}
           </p>
         </div>
 
         {/* Hero Image */}
-        <div className="relative aspect-[21/9] rounded-sm overflow-hidden mb-20">
+        <div className="relative aspect-21/9 rounded-sm overflow-hidden mb-20">
           <Image
             src="/images/hero-wine.jpg"
             alt="Elegant red wine pour"
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-background via-background/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-8 sm:p-12">
             <p className="text-foreground/90 text-lg sm:text-xl max-w-xl leading-relaxed">
               {t.wine.heroDesc}
@@ -128,7 +128,7 @@ export function WineSection() {
               </div>
             </div>
           </div>
-          <div className="relative aspect-[4/3] rounded-sm overflow-hidden">
+          <div className="relative aspect-4/3 rounded-sm overflow-hidden">
             <Image
               src="/images/wine-cellar.jpg"
               alt="Wine cellar"
@@ -149,7 +149,7 @@ export function WineSection() {
             </p>
           </div>
           <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="relative aspect-[4/3] rounded-sm overflow-hidden">
+            <div className="relative aspect-4/3 rounded-sm overflow-hidden">
               <Image
                 src="/images/wine-glasses.jpg"
                 alt="Wine glasses"

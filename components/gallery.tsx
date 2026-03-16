@@ -71,7 +71,7 @@ export function Gallery() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
             {t.gallery.title}
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed whitespace-pre-line">
             {t.gallery.description}
           </p>
         </div>
@@ -83,7 +83,7 @@ export function Gallery() {
               type="button"
               key={image.src}
               onClick={() => setSelectedImage(image)}
-              className="group relative aspect-[4/3] rounded-sm overflow-hidden cursor-pointer text-left"
+              className="group relative aspect-4/3 rounded-sm overflow-hidden cursor-pointer text-left"
             >
               <Image
                 src={image.src || "/placeholder.svg"}
@@ -91,7 +91,7 @@ export function Gallery() {
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+              <div className="absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <span className="text-accent text-xs tracking-widest uppercase mb-2 block">
                   {image.category}
@@ -109,7 +109,10 @@ export function Gallery() {
           open={!!selectedImage}
           onOpenChange={() => setSelectedImage(null)}
         >
-          <DialogContent className="max-w-4xl w-full bg-background/95 backdrop-blur-sm border-border p-0">
+          <DialogContent
+            showCloseButton={false}
+            className="max-w-4xl w-full bg-background/95 backdrop-blur-sm border-border p-0"
+          >
             <VisuallyHidden>
               <DialogTitle>{selectedImage?.title}</DialogTitle>
             </VisuallyHidden>
@@ -117,20 +120,20 @@ export function Gallery() {
               variant="ghost"
               size="icon"
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 z-10 text-foreground hover:text-accent"
+              className="absolute top-4 right-4 z-10 text-foreground hover:bg-accent/15 hover:text-foreground"
               aria-label={t.gallery.closeLightbox}
             >
               <X size={24} />
             </Button>
             {selectedImage && (
-              <div className="relative aspect-[4/3] w-full">
+              <div className="relative aspect-4/3 w-full">
                 <Image
                   src={selectedImage.src || "/placeholder.svg"}
                   alt={selectedImage.alt}
                   fill
                   className="object-cover rounded-lg"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background to-transparent rounded-b-lg">
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-linear-to-t from-background to-transparent rounded-b-lg">
                   <span className="text-accent text-xs tracking-widest uppercase mb-2 block">
                     {selectedImage.category}
                   </span>

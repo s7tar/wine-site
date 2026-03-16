@@ -35,7 +35,7 @@ export function Hero() {
             <span className="block">{t.hero.title1}</span>
             <span className="block text-accent">{t.hero.title2}</span>
           </h1>
-          <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl whitespace-pre-line">
             {t.hero.description}
           </p>
           <div className="flex flex-wrap gap-4">

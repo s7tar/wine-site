@@ -16,20 +16,20 @@ export const ja: typeof zhCN = {
   // Hero Section
   hero: {
     subtitle: "上質な暮らしの美学",
-    title1: "極上を纏う",
-    title2: "ワインが彩る贅沢と優雅",
+    title1: "ワインがもたらす、",
+    title2: "贅沢で優雅なひととき。",
     description:
-      "気品は佇まいに、洗練は細部に宿る。ワインの奥深い文化に触れ、時を重ねて育まれた芳醇な香りとともに、人生の美しい瞬間を味わいください。",
-    exploreWine: "ワイン知識を見る",
+      "気品は佇まいに、洗練は細部に宿る。\nワインの奥深い文化と、熟成が育む芳醇な香り。\nその一杯が、人生の美しい瞬間をより豊かにします。",
+    exploreWine: "ワインを知る",
     scrollDown: "スクロール",
   },
 
   // Wine Section
   wine: {
-    subtitle: "ワインの基礎知識",
+    subtitle: "Wine Knowledge",
     title: "ワインの基礎知識",
     intro:
-      "ワインはブドウを原料に、発酵によって造られる果実酒です。世界でも生産量が多く、広く親しまれているお酒のひとつです。",
+      "ワインは、ブドウを原料とし、発酵によって造られる果実酒です。\n世界各地で生産され、その豊かな香りと味わいから、世界中の人々に広く親しまれています。",
     heroDesc:
       "ワインは新陳代謝を整え、血行を促すともいわれています。適量を心地よく楽しむことで、健やかな時間に寄り添います。",
     typeTitle: "色による分類",
@@ -67,7 +67,7 @@ export const ja: typeof zhCN = {
     champagneGlass: "シャンパンフルート",
     champagneDesc:
       "細長い形状で、泡が上昇するスペースを確保し、より豊かで美しい泡立ちを演出します。すべてのスパークリングワインに適しています。",
-    tastingTitle: "テイスティングの手順",
+    tastingTitle: "ワインの楽しみ方",
     look: "見る",
     lookTitle: "色を観察",
     lookDesc:
@@ -80,10 +80,10 @@ export const ja: typeof zhCN = {
     tasteTitle: "味を味わう",
     tasteDesc:
       "少量を口に含み、舌全体で転がします。質感、風味、余韻の長さを確かめます。",
-    share: "語る",
+    share: "語り合う",
     shareTitle: "言葉にして共有",
     shareDesc:
-      "感じた色・香り・味わいを言葉にしてみましょう。会話にすることで、体験がより深まります。",
+      "感じた印象を言葉にして共有することで、ワインの魅力はさらに深まります。",
   },
 
   // Gallery Section
@@ -91,13 +91,13 @@ export const ja: typeof zhCN = {
     subtitle: "ギャラリー",
     title: "厳選ギャラリー",
     description:
-      "洗練されたワインの世界へ。上質なひとときを彩る、選りすぐりのシーンをご覧ください。",
+      "厳選されたワインの世界へ。\n上質なひとときを彩る、選りすぐりのシーンをご覧ください。",
     vineyard: "葡萄畑",
     cellar: "プライベートセラー",
     ritual: "テイスティング体験",
     barrels: "オーク樽",
     decanting: "デキャンタージュの美学",
-    grapes: "ワイン用ブドウ",
+    grapes: "ブドウ品種",
     wine: "ワイン",
     closeLightbox: "画像を閉じる",
   },
