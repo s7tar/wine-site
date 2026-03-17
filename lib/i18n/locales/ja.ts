@@ -132,6 +132,9 @@ export const ja: typeof zhCN = {
     submitting: "送信中...",
     submitSuccess: "送信完了",
     submitSuccessDesc: "内容を確認のうえ、折り返しご連絡いたします。",
+    submitError: "送信に失敗しました",
+    submitErrorDesc:
+      "時間をおいて再度お試しください。お急ぎの場合は電話またはメールでご連絡ください。",
     required: "*",
   },
 

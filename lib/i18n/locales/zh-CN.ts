@@ -124,6 +124,8 @@ export const zhCN = {
     submitting: "提交中...",
     submitSuccess: "提交成功",
     submitSuccessDesc: "我们会尽快与您联系",
+    submitError: "提交失败",
+    submitErrorDesc: "请稍后再试，或通过电话/邮箱联系我们",
     required: "*",
   },
 

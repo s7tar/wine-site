@@ -133,6 +133,8 @@ export const en: typeof zhCN = {
     submitting: "Submitting...",
     submitSuccess: "Submitted Successfully",
     submitSuccessDesc: "We will contact you soon",
+    submitError: "Submission failed",
+    submitErrorDesc: "Please try again later, or contact us by phone/email",
     required: "*",
   },
 

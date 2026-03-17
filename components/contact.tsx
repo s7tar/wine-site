@@ -23,6 +23,7 @@ export function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const contactInfo = [
     {
@@ -49,12 +50,30 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError(false);
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: "", email: "", phone: "", message: "" });
-    setTimeout(() => setIsSubmitted(false), 3000);
+
+    try {
+      const res = await fetch("/api/messages", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to submit");
+      }
+
+      setIsSubmitted(true);
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      setTimeout(() => setIsSubmitted(false), 3000);
+    } catch {
+      setSubmitError(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -148,6 +167,16 @@ export function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {submitError ? (
+                    <div className="rounded-sm border border-destructive/40 bg-destructive/10 p-4">
+                      <p className="text-sm font-medium text-destructive">
+                        {t.contact.submitError}
+                      </p>
+                      <p className="text-sm text-destructive/90 mt-1">
+                        {t.contact.submitErrorDesc}
+                      </p>
+                    </div>
+                  ) : null}
                   <div className="space-y-2">
                     <Label htmlFor="name" className="text-foreground">
                       {t.contact.nameLabel}{" "}
