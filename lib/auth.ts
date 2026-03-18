@@ -2,12 +2,37 @@ import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import { prisma } from "@/lib/prisma";
 
+function normalizeOrigin(origin: string) {
+  return origin.replace(/\/+$/, "");
+}
+
+function getAuthBaseURL() {
+  const envUrl = process.env.BETTER_AUTH_URL?.trim();
+  if (envUrl) return normalizeOrigin(envUrl);
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return undefined;
+}
+
+function getTrustedOrigins() {
+  const origins = new Set<string>();
+
+  const envUrl = process.env.BETTER_AUTH_URL?.trim();
+  if (envUrl) origins.add(normalizeOrigin(envUrl));
+
+  if (process.env.VERCEL_URL) origins.add(`https://${process.env.VERCEL_URL}`);
+
+  if (process.env.NODE_ENV !== "production") {
+    origins.add("http://localhost:3000");
+    origins.add("http://localhost:3153");
+  }
+
+  return Array.from(origins);
+}
+
 export const auth = betterAuth({
-  baseURL: process.env.BETTER_AUTH_URL,
+  baseURL: getAuthBaseURL(),
   secret: process.env.BETTER_AUTH_SECRET,
-  trustedOrigins: process.env.BETTER_AUTH_URL
-    ? [process.env.BETTER_AUTH_URL]
-    : [],
+  trustedOrigins: getTrustedOrigins(),
   database: prismaAdapter(prisma, {
     provider: "postgresql",
   }),
