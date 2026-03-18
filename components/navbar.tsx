@@ -137,7 +137,7 @@ export function Navbar() {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="bg-card border-border w-[300px]"
+                className="bg-card border-border w-75"
               >
                 <div className="flex flex-col gap-6 mt-8">
                   {navLinks.map((link) => (
