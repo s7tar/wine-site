@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -11,7 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useI18n, localeNames, type Locale } from "@/lib/i18n/context";
 
 export function Navbar() {
@@ -137,14 +137,15 @@ export function Navbar() {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="bg-card border-border w-75"
+                className="bg-card border-border w-3/4 sm:max-w-sm px-6 py-10"
               >
-                <div className="flex flex-col gap-6 mt-8">
+                <SheetTitle className="sr-only">{t.nav.openMenu}</SheetTitle>
+                <div className="mt-8 space-y-2">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-lg font-medium text-foreground/80 hover:text-accent transition-colors py-2"
+                      className="block rounded-md px-4 py-3 text-lg font-medium text-foreground/80 transition-colors hover:bg-accent/15 hover:text-foreground"
                     >
                       {link.label}
                     </Link>
